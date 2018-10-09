@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.omarbradley.oemssample.movie.service.impl.MovieMapper">
+
+	<resultMap id="movieVO"
+		type="com.omarbradley.oemssample.movie.vo.MovieVO">
+		<result property="id" column="id" />
+		<result property="sdelcheck" column="sdelcheck" />
+		<result property="title" column="title" />
+		<result property="share" column="share" />
+		<result property="count" column="count" />
+		<result property="date" column="date" />
+		<result property="nation" column="nation" />
+	</resultMap>
+
+	<select id="getAllMovies" resultMap="movieVO">
+		SELECT 
+			id,
+			sdelcheck, 
+			title,
+			share,
+			count,
+			date,
+			nation
+		FROM
+			movie
+	</select>
+	
+	<select id="getMovies" resultMap="movieVO">
+		SELECT 
+			id,
+			sdelcheck, 
+			title,
+			share,
+			count,
+			date,
+			nation
+		FROM
+			movie
+		WHERE
+			id=#{id}
+	</select>
+	
+</mapper>
