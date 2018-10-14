@@ -12,11 +12,10 @@
 			value="classpath:/oemssample/mapper/**/*Mapper.xml" />
 	</bean>
 
-	<bean id="movieMapper"
-		class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface"
-			value="com.omarbradley.oemssample.movie.service.impl.MovieMapper" />
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	<bean
+		class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
+		<property name="basePackage"
+			value="com.omarbradley.oemssample.**.service.impl" />
 	</bean>
 
 </beans>

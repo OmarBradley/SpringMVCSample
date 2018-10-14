@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page pageEncoding="utf-8" session="false"%>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <!-- Required meta tags -->
@@ -8,11 +8,21 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
-<link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
+<link href="<c:url value="bootstrap/css/bootstrap.min.css" />"
+	rel="stylesheet">
 <title>모든 영화 보이는 페이지</title>
 <!-- JS -->
 </head>
 <body class="container">
+	
+	<!-- 라이선스 파일 -->
+	<script language="javascript" src="/Sheet/ibleaders.js"></script>
+	<!-- 제품 파일 -->
+	<script language="javascript" src="/Sheet/ibsheetinfo.js"></script>
+	<script language="javascript" src="/Sheet/ibsheet.js"></script>
+	<!-- client import/export 기능 파일 -->
+	<script language="javascript" src="/Sheet/ibexcel.js"></script>
+	
 	<div class="jumbotron">
 		<h2>모든 영화 보이는 페이지</h2>
 	</div>
